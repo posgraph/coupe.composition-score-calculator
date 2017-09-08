@@ -14,7 +14,7 @@ This repository contains source code for calculating image composition score.
 * [getLineValue.m](Composition%20Score%20Calculator/getLineValue.m) : Measure the composition score that is related to line information
 
 * [CompositionDemo.m](Composition%20Score%20Calculator/CompositionDemo.m) : Demo function (GUI Environment)  
-   * If you run this function, you can get the result in a GUI environment  
+   * This function runs a GUI environment for calculating the composition score
    ![Compsition Demo GUI](docs/images/CompositionScoreDemoGUI.png)
    
 ## Requirements ##
