@@ -1,7 +1,7 @@
 # Composition Score Calculator #
 
 ## Introduction ##
-This repository contains source code for calculating image composition score.
+This easy to use matlab project calculates an image's composition score to measure its aesthetic quality using Deep Learning. Included is a GUI that takes an image and displays its score in a user friendly way.
 
 ## Files ##
 * [getCompScore_demo.m](Composition%20Score%20Calculator/getCompScore_demo.m) : Main function
