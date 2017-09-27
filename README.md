@@ -21,6 +21,6 @@ This easy to use matlab project calculates an image's composition score to measu
 * Matlab
 
 ## Coupe Project Links ##
-* [Coupe Website](http://rice.postech.ac.kr/)
+* [Coupe Website](http://coupe.postech.ac.kr/)
 * [POSTECH CG Lab.](http://cg.postech.ac.kr/)
 
