@@ -24,9 +24,9 @@ line_idx = 1;
 % 	}
 %         
 % 
-% pt: prominant lineÀÇ start, È¤Àº end
-% ls: third lineÀÇ start
-% le: third lineÀÇ end
+% pt: prominant lineï¿½ï¿½ start, È¤ï¿½ï¿½ end
+% ls: third lineï¿½ï¿½ start
+% le: third lineï¿½ï¿½ end
 % 
 % ((le.y()-ls.y())*pt.x() - (le.x()-ls.x())*pt.y() + le.x()*ls.y() - ls.x()*le.y())/len;
 
@@ -73,11 +73,13 @@ if (line_idx == 1) || (line_idx == 2)
     if (k < tanTheta1)
         targetPoint = thirds_center(line_idx, :);
         line_info = 0; % HORIZONTALLINE
-    elseif (tanTheta1 <= k && k <= tanTheta2)
-        targetPoint(1,1) = thirds_center(line_idx, 1) + (k - tanTheta1)/(tanTheta2 - tanTheta1)*(image_center_x - thirds_center(line_idx, 1));
-        targetPoint(1,2) = thirds_center(line_idx, 2) + (k - tanTheta1)/(tanTheta2 - tanTheta1)*(image_center_y - thirds_center(line_idx, 2));
-        line_info = 2; % DIAGONALLINE_HORIZONTAL
-    elseif (tanTheta2 < k)
+%     elseif (tanTheta1 <= k && k <= tanTheta2)
+%         targetPoint(1,1) = thirds_center(line_idx, 1) + (k - tanTheta1)/(tanTheta2 - tanTheta1)*(image_center_x - thirds_center(line_idx, 1));
+%         targetPoint(1,2) = thirds_center(line_idx, 2) + (k - tanTheta1)/(tanTheta2 - tanTheta1)*(image_center_y - thirds_center(line_idx, 2));
+%         line_info = 2; % DIAGONALLINE_HORIZONTAL
+%         disp('sshang1');
+%    elseif (tanTheta2 < k)
+    else
         targetPoint = ([image_center_x, image_center_y]);
         line_info = 2;
         if (x2-x1) == 0
@@ -96,11 +98,13 @@ elseif (line_idx == 3) || (line_idx == 4)
     if (k < tanTheta1) || ((x2-x1) == 0)
         targetPoint = thirds_center(line_idx, :);
         line_info = 1; % VERTICALLINE
-    elseif (tanTheta1 <= k && k <= tanTheta2)
-        targetPoint(1,1) = thirds_center(line_idx, 1) + (k - tanTheta1)/(tanTheta2 - tanTheta1)*(image_center_x - thirds_center(line_idx, 1));
-        targetPoint(1,2) = thirds_center(line_idx, 2) + (k - tanTheta1)/(tanTheta2 - tanTheta1)*(image_center_y - thirds_center(line_idx, 2));
-        line_info = 3; % DIAGONALLINE_VERTICAL
-    elseif (tanTheta2 < k)
+%     elseif (tanTheta1 <= k && k <= tanTheta2)
+%         targetPoint(1,1) = thirds_center(line_idx, 1) + (k - tanTheta1)/(tanTheta2 - tanTheta1)*(image_center_x - thirds_center(line_idx, 1));
+%         targetPoint(1,2) = thirds_center(line_idx, 2) + (k - tanTheta1)/(tanTheta2 - tanTheta1)*(image_center_y - thirds_center(line_idx, 2));
+%         line_info = 3; % DIAGONALLINE_VERTICAL
+%         disp('sshang2');
+%    elseif (tanTheta2 < k)
+    else
         targetPoint = ([image_center_x, image_center_y]);
         line_info = 3;
     end
